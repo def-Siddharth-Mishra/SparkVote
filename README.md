@@ -152,7 +152,7 @@ lib/
 
 For questions or support regarding this assignment, please contact:
 - GitHub Issues: [Create an issue](https://github.com/your-username/startup-idea-evaluator/issues)
-- Email: [your-email@example.com]
+- Email: [siddharthmishra918@gmail.com]
 
 ---
 
