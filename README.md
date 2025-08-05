@@ -53,8 +53,8 @@ An interactive mobile app that allows users to submit startup ideas, receive fun
 
 ### Clone the repository
 ```bash
-git clone https://github.com/your-username/startup-idea-evaluator.git
-cd startup-idea-evaluator
+git clone https://github.com/def-Siddharth-Mishra/SparkVote.git
+cd SparkVote
 ```
 
 ### Install dependencies
@@ -150,12 +150,5 @@ lib/
 
 ## 📞 Contact
 
-For questions or support regarding this assignment, please contact:
-- GitHub Issues: [Create an issue](https://github.com/your-username/startup-idea-evaluator/issues)
+For questions or support regarding this project, please contact:
 - Email: [siddharthmishra918@gmail.com]
-
----
-
-**⏰ Deadline**: You have 4 days from the day you applied.
-
-**Good luck with your submission! 🎉**
