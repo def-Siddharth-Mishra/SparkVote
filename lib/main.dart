@@ -10,30 +10,25 @@ import 'data/repositories/idea_repository_impl.dart';
 import 'domain/repositories/idea_repository.dart';
 
 void main() {
-  runApp(const StartupIdeaApp());
+  runApp(const SparkVote());
 }
 
-class StartupIdeaApp extends StatelessWidget {
-  const StartupIdeaApp({Key? key}) : super(key: key);
+class SparkVote extends StatelessWidget {
+  const SparkVote({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        // --- Data Layer Providers ---
         Provider<LocalStorageService>(create: (_) => LocalStorageService()),
-        // The IdeaRepository implementation depends on LocalStorageService.
-        // We use ProxyProvider to wire them together.
         ProxyProvider<LocalStorageService, IdeaRepository>(
           update: (context, localStorageService, previous) =>
               IdeaRepositoryImpl(localStorageService),
         ),
 
-        // --- Presentation Layer (State Management) Providers ---
         ChangeNotifierProvider(
           create: (context) => ThemeProvider()..loadTheme(),
         ),
-        // IdeaProvider depends on IdeaRepository.
         ChangeNotifierProxyProvider<IdeaRepository, IdeaProvider>(
           create: (context) => IdeaProvider(context.read<IdeaRepository>()),
           update: (context, ideaRepository, previous) =>
